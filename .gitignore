@@ -1,0 +1,29 @@
+# Directorios de compilación
+/build/
+/cmake-build-*/
+
+# Archivos de configuración de CLion y JetBrains
+.idea/
+*.iml
+
+# Archivos generados por CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ejecutables y archivos binarios
+*.exe
+*.out
+*.app
+
+# Archivos objeto y archivos de depuración
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+
+# Otros archivos temporales o logs
+*.log
+*.tmp

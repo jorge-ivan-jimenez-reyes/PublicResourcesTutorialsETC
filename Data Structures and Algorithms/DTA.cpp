@@ -46,3 +46,6 @@ int main() {
     printList(first);
     return 0;
 }
+
+//Arra vs Linked _List https://www.youtube.com/watch?v=B31LgI4Y4DQ&t=13191s
+
