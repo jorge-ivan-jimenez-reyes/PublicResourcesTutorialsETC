@@ -1,3 +1,7 @@
 # ninja log v6
 1	735	1738381434506690960	CMakeFiles/LeetCodeProblems.dir/main.cpp.o	ed9f7c86bd13bf7d
 736	873	1738381435242345463	LeetCodeProblems	400f182b8a579d4f
+6	832	1738549088277634164	CMakeFiles/LeetCodeProblems.dir/main.cpp.o	ed9f7c86bd13bf7d
+8	833	1738549088279161580	CMakeFiles/LeetCodeProblems.dir/Data_Structures_and_Algorithms/DTA.cpp.o	46bcd5469dc11977
+18	578	1738549155343622258	CMakeFiles/LeetCodeProblems.dir/main.cpp.o	ed9f7c86bd13bf7d
+578	697	1738549155903890976	LeetCodeProblems	62384a6a34f74a7d

@@ -3,4 +3,5 @@ project(LeetCodeProblems)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(LeetCodeProblems main.cpp)
+add_executable(LeetCodeProblems main.cpp
+        "Data Structures and Algorithms/DTA.cpp")
