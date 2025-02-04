@@ -54,3 +54,13 @@ std::vector<char> reconstruirAlfabeto(const std::string &fastaFileName, int offs
     return alfabeto;
 }
 
+//b) Función para Desencriptar una Letra
+//Esta función hará la búsqueda inversa: dada una letra encriptada, se localiza en el nuevo alfabeto y se determina cuál es la letra original (basándose en la posición).
+char desencriptarLetra(char letra, const std::vector<char> &alfabetoOriginal) {
+    // Se busca el índice en el alfabeto encriptado
+    for (int i = 0; i < alfabetoOriginal.size(); i++) {
+        if (alfabetoOriginal[i] == letra)
+            return 'A' + i; // Retorna la letra original correspondiente
+    }
+    return letra; // Si no se encuentra (o es espacio), se retorna sin cambios
+}
