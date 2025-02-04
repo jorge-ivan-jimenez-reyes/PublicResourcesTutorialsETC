@@ -64,3 +64,71 @@ char desencriptarLetra(char letra, const std::vector<char> &alfabetoOriginal) {
     }
     return letra; // Si no se encuentra (o es espacio), se retorna sin cambios
 }
+//funcion main
+int main() {
+    // Abrir el archivo encriptado
+    std::ifstream cod("Original_Document.cod");
+    if (!cod.is_open()) {
+        std::cerr << "No se pudo abrir Original_Document.cod" << std::endl;
+        return 1;
+    }
+    std::stringstream buffer;
+    buffer << cod.rdbuf();
+    std::string textoEncriptado = buffer.str();
+    cod.close();
+
+    // Abrir el archivo de instrucciones para desencriptar
+    std::ifstream instrucciones("Intruction_to_decode.txt");
+    if (!instrucciones.is_open()) {
+        std::cerr << "No se pudo abrir Intruction_to_decode.txt" << std::endl;
+        return 1;
+    }
+
+    std::string lineaInstruccion;
+    std::getline(instrucciones, lineaInstruccion);
+    instrucciones.close();
+
+    // Se espera un formato similar a "file1.fasta,68,30"
+    std::istringstream iss(lineaInstruccion);
+    std::string fastaFile;
+    std::string temp;
+    int offset = 0, numLineas = 0;
+    if (std::getline(iss, fastaFile, ',') &&
+        std::getline(iss, temp, ',')) {
+        offset = std::stoi(temp);
+        if (std::getline(iss, temp, ',')) {
+            numLineas = std::stoi(temp);
+        }
+    } else {
+        std::cerr << "Formato de instrucciones incorrecto." << std::endl;
+        return 1;
+    }
+
+    // Reconstruir el alfabeto original usando las instrucciones
+    std::vector<char> alfabetoOriginal = reconstruirAlfabeto(fastaFile, offset, numLineas);
+    if (alfabetoOriginal.size() != 26) {
+        std::cerr << "No se pudo reconstruir el alfabeto correctamente." << std::endl;
+        return 1;
+    }
+
+    // Desencriptar el texto
+    std::string textoDesencriptado;
+    for (char c : textoEncriptado) {
+        if (std::isspace(c))
+            textoDesencriptado += c;
+        else
+            textoDesencriptado += desencriptarLetra(c, alfabetoOriginal);
+    }
+
+    // Guardar el texto desencriptado en un nuevo archivo
+    std::ofstream salida("Original_Document_recuperado.txt");
+    if (!salida.is_open()) {
+        std::cerr << "No se pudo crear Original_Document_recuperado.txt" << std::endl;
+        return 1;
+    }
+    salida << textoDesencriptado;
+    salida.close();
+
+    std::cout << "Desencriptación completada." << std::endl;
+    return 0;
+}
