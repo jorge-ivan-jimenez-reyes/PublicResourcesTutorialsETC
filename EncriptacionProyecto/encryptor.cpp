@@ -71,3 +71,17 @@ std::vector<char> construirAlfabeto(const std::string &fastaFileName, int offset
 
   return nuevoAlfabeto;
 }
+
+//funcion para encriptar una letra, la funcion toma una letra (que ya supone en mayusculas) y
+//remplaza segun el nuevo alfabeto
+
+char encriptarLetra(char letra, const std::vector<char> &nuevoAlfabeto) {
+  if (std::isalpha(letra)) {
+    int indice = letra - 'A';
+    if (indice >= 0 && indice < nuevoAlfabeto.size()) {
+      return nuevoAlfabeto[indice];
+    }
+  }
+  return letra; // En caso de espacios u otros casos, se retorna sin cambios.
+}
+
