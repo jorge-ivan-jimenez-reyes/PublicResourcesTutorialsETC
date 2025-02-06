@@ -120,15 +120,5 @@ int main() {
             textoDesencriptado += desencriptarLetra(c, alfabetoOriginal);
     }
 
-    // Guardar el texto desencriptado en un nuevo archivo
-    std::ofstream salida("Original_Document_recuperado.txt");
-    if (!salida.is_open()) {
-        std::cerr << "No se pudo crear Original_Document_recuperado.txt" << std::endl;
-        return 1;
-    }
-    salida << textoDesencriptado;
-    salida.close();
 
-    std::cout << "Desencriptación completada." << std::endl;
-    return 0;
 }
