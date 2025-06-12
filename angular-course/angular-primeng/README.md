@@ -440,8 +440,4 @@ Después de años desarrollando en Angular, esta combinación es **GAME CHANGER*
 
 ---
 
-**¿Te ha servido este tutorial? Dale ❤️ y compártelo con tu equipo!**
 
-**¡Feliz codificación con Angular 19, PrimeNG v19 y Tailwind CSS!** 🎉
-
-*#Angular #PrimeNG #TailwindCSS #FrontendDevelopment #WebDevelopment #Angular19*
