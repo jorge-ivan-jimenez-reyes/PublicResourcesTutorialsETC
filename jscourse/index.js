@@ -1,7 +1,7 @@
 //Data Types
 
 //there are two types of values
-////1. Primitive values
+//1. Primitive values
 //object values
 //
 
