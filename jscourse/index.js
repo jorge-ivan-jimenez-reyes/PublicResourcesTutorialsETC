@@ -1,5 +1,3 @@
-let js = "amazinx";
-
 //Data Types
 
 //there are two types of values
