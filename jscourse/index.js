@@ -27,5 +27,4 @@ let emptyValue = null;
 
 //Symbol (es2015)
 //
-////BigInt (es2020)
-//
+////BigI
