@@ -30,3 +30,18 @@
 //////BigI
 //
 //
+//
+
+
+//IF 
+
+const age = 15;
+
+
+
+if(age >15){
+ console.log('You can Drive')
+}else{
+  console.log('you dont')
+}
+
