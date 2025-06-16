@@ -30,18 +30,32 @@
 //////BigI
 //
 //
-//
 
-
-//IF 
+//IF
 
 const age = 15;
 
-
-
-if(age >15){
- console.log('You can Drive')
-}else{
-  console.log('you dont')
+if (age > 15) {
+  console.log("You can Drive");
+} else {
+  console.log("you dont");
 }
 
+// type conversion cohersion
+//
+
+//Equality Operator
+
+//Strict equiality operato
+
+if (age === 18) console.log("You became an adult");
+
+//Not equiality
+if (age !== 18) console.log("Your are not adult");
+
+//logical Operators
+
+const hasDriverLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriverLicense && hasGoodVision);
