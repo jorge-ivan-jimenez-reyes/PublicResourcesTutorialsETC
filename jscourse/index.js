@@ -29,43 +29,8 @@
 ////
 //////BigI
 //
+//let,const,var;
+
+//Use the const way to declare variables that won't change best practices
 //
-
-//IF
-
-const age = 15;
-
-if (age > 15) {
-  console.log("You can Drive");
-} else {
-  console.log("you dont");
-}
-
-// type conversion cohersion
 //
-
-//Equality Operator
-
-//Strict equiality operato
-
-if (age === 18) console.log("You became an adult");
-
-//Not equiality
-if (age !== 18) console.log("Your are not adult");
-
-//logical Operators
-
-const hasDriverLicense = true;
-const hasGoodVision = false;
-
-console.log(hasDriverLicense && hasGoodVision); //false
-console.log(hasDriverLicense || hasGoodVision); //true
-console.log(!hasDriverLicense); //false
-
-const shouldDrive = hasDriverLicense && hasGoodVision;
-
-if (hasDriverLicense && hasGoodVision) {
-  console.log("is able to ride");
-} else {
-  console.log("someone else shouldDrive");
-}
